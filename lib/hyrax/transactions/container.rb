@@ -20,6 +20,7 @@ module Hyrax
     class Container
       require 'hyrax/transactions/create_work'
       require 'hyrax/transactions/steps/apply_permission_template'
+      require 'hyrax/transactions/steps/apply_visibility'
       require 'hyrax/transactions/steps/ensure_admin_set'
       require 'hyrax/transactions/steps/ensure_permission_template'
       require 'hyrax/transactions/steps/save_work'
@@ -32,6 +33,10 @@ module Hyrax
       namespace 'work' do |ops|
         ops.register 'apply_permission_template' do
           Steps::ApplyPermissionTemplate.new
+        end
+
+        ops.register 'apply_visibility' do
+          Steps::ApplyVisibility.new
         end
 
         ops.register 'ensure_admin_set' do
