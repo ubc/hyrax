@@ -15,5 +15,7 @@ require 'wings/valkyrie/metadata_adapter'
 require 'wings/valkyrie/resource_factory'
 require 'wings/valkyrie/persister'
 require 'wings/valkyrie/query_service'
+require 'wings/valkyrie/postgres/metadata_adapter'
+require 'wings/valkyrie/postgres/resource_factory'
 
 ActiveFedora::Base.include Wings::Valkyrizable
