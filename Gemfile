@@ -48,4 +48,6 @@ end
 # END ENGINE_CART BLOCK
 # rubocop:enable Bundler/DuplicatedGem
 
+gem 'hydra-head', :git => 'https://github.com/ubc/hydra-head', :branch => 'ubc-test'
+
 eval_gemfile File.expand_path('spec/test_app_templates/Gemfile.extra', File.dirname(__FILE__)) unless File.exist?(file)
